@@ -7,7 +7,7 @@ dfs = pd.read_html(
     match = "Historical population"
 )
 df = dfs[0]
-df = df.iloc[0:-2]
+df = df.iloc[0:-1]
 df = df[["Census", "Pop."]].astype("int")
 print(df.info())
 df.plot(x = "Census", y = "Pop.")
